@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+            text-align: center;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Práctica de JavaScript</h1>
+    <p>Manipulación de elementos HTML</p>
+
+    
+        <h2>1. innerHTML</h2>
+
+        <p id="mensaje">Bienvenido a mi página</p>
+
+        <button onclick="cambiarTexto()">
+            Cambiar texto
+        </button>
+
+        <button onclick="agregarImagen()">
+            Agregar imagen
+        </button>
+
+        <div id="imagen"></div>
+    </div>
+
+
+
+        <h2>2. getElementById()</h2>
+
+        <p id="aviso">Hola estudiantes</p>
+
+        <button onclick="mostrarMensaje()">
+            Mostrar mensaje
+        </button>
+
+        <button onclick="cambiarColor()">
+            Cambiar color
+        </button>
+    </div>
+
+
+
+        <h2>3. querySelector()</h2>
+
+        <p class="texto">Este es un texto importante</p>
+
+        <button onclick="cambiarEstilo()">
+            Cambiar texto
+        </button>
+
+        <br>
+
+        <button class="enviar" onclick="deshabilitar()">
+            Enviar
+        </button>
+    </div>
+
+
+    <script>
+
+        function cambiarTexto() {
+            document.getElementById("mensaje").innerHTML =
+            "Hola, bienvenido a JavaScript";
+        }
+
+        function agregarImagen() {
+            document.getElementById("imagen").innerHTML =
+            '<img src="https://placehold.co/150x100" alt="Imagen">';
+        }
+
+
+        function mostrarMensaje() {
+            document.getElementById("aviso").innerHTML =
+            "Hola, estás aprendiendo JavaScript";
+        }
+
+        function cambiarColor() {
+            document.getElementById("aviso").style.color = "red";
+        }
+
+
+        function cambiarEstilo() {
+            document.querySelector(".texto").style.color = "blue";
+        }
+
+        function deshabilitar() {
+            document.querySelector(".enviar").disabled = true;
+        }
+
+    </script>
+
+</body>
+</html>
+
